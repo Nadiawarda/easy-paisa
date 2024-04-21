@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 import inquirer from "inquirer";
 import chalk from "chalk";
 
@@ -80,11 +79,10 @@ if (start.pincode == 550305) {
         
         keepRunning = false;
         break;
-    }
+      }
   }
 } else {
   console.log(chalk.cyan('Invalid Pincode! Please Enter Strong Pincode'));
   console.log("");
-  
 };
 
