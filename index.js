@@ -1,7 +1,9 @@
-#! /usr/bin/env node
+// #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
-console.log(chalk.bgYellow.italic.bold(`******************* Welcome To EasyPaisa App ******************`));
+console.log(chalk.blueBright("\n**********************************************************************"));
+console.log(chalk.bgYellow.italic.bold(`>>>>>>>>>>>>>>>>>>>>> * Welcome To EasyPaisa App * <<<<<<<<<<<<<<<<<<<`));
+console.log(chalk.blueBright("\n***********************************************************************"));
 console.log("");
 const transactionHistory = [];
 const start = await inquirer.prompt([
@@ -12,7 +14,7 @@ const start = await inquirer.prompt([
         mask: '*'
     }
 ]);
-if (start.pincode == 550305) {
+if (start.pincode == 555) {
     console.log(chalk.blue.italic.bold.underline(' ======== correct pincode ==========='));
     console.log("");
     let balance = 40000;
@@ -65,7 +67,9 @@ if (start.pincode == 550305) {
                 ;
                 break;
             case 'Exit':
-                console.log(chalk.bgCyan.italic.bold('******* Thank you for using EasyPaisa App! Kindly Share Your Experience.*********'));
+                console.log(chalk.redBright("*******************************************************************************"));
+                console.log(chalk.bgCyan.italic.bold('                <<<<<<<<<<  Thank you for using EasyPaisa App! \n                 Kindly Share Your Experience.   >>>>>>>>>'));
+                console.log(chalk.redBright("*******************************************************************************"));
                 console.log("");
                 keepRunning = false;
                 break;
